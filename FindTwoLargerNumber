@@ -12,28 +12,28 @@ int main()
 	int number = 0;
 	int largetNumber = 0, secondLargeNumber = 0;
 
-	cout << "Enter 10 number, find Two largest number: ";
-	cin >> number;
 
 	while (flag < 10)
 	{
-		if (number > largetNumber)
+		cout << "Enter 10 number, find Two largest number: ";
+		cin >> number;
+	
+
+		if (number> largetNumber)
 		{
+			secondLargeNumber = largetNumber;
 			largetNumber = number;
 		}
-
-		if (number<largetNumber )
+		else if (number < largetNumber && number > secondLargeNumber)
 		{
-			if (number > secondLargeNumber)
-			{
-				secondLargeNumber = number;
-			}
+			secondLargeNumber = number;
 		}
+
+
+	
 
 		flag++;
 
-		cout << "Enter next number: ";
-		cin >> number;
 	}
 
 	cout << "The largest number: " << largetNumber << "\nthe second largest number: "

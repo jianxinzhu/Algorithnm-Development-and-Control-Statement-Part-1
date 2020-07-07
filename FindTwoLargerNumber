@@ -1,0 +1,43 @@
+/*   name: jianxin zhu
+     date: july/06/2020
+*/
+
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int flag = 1;
+	int number = 0;
+	int largetNumber = 0, secondLargeNumber = 0;
+
+	cout << "Enter 10 number, find Two largest number: ";
+	cin >> number;
+
+	while (flag < 10)
+	{
+		if (number > largetNumber)
+		{
+			largetNumber = number;
+		}
+
+		if (number<largetNumber )
+		{
+			if (number > secondLargeNumber)
+			{
+				secondLargeNumber = number;
+			}
+		}
+
+		flag++;
+
+		cout << "Enter next number: ";
+		cin >> number;
+	}
+
+	cout << "The largest number: " << largetNumber << "\nthe second largest number: "
+		<< secondLargeNumber << endl;
+}
+
+
